@@ -1,7 +1,7 @@
 # glibc-capable Alpine
 
-These images are identical to the official `alpine` images at the Docker [hub],
-while being able to execute binaries that depend on glibc. This is made
+These images are almost identical to the official `alpine` images at the Docker
+[hub], while being able to execute binaries that depend on glibc. This is made
 possible through [this][glibc-compat] wonderful glibc compatibility layer.
 [Hooks] ensure that, for each build, identical copies to the current list of
 available [tags] for the official [alpine][hub] are automatically (re)built.
