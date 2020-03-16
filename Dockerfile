@@ -1,7 +1,7 @@
 ARG SRCTAG=latest
 FROM alpine:${SRCTAG}
 
-ARG GLIBC_VER="2.30-r0"
+ARG GLIBC_VER="2.31-r0"
 RUN apk add --update --no-cache ca-certificates tzdata curl && \
   ALPINE_GLIBC_REPO="https://github.com/sgerrand/alpine-pkg-glibc/releases/download" && \
   curl -Ls https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub -o /etc/apk/keys/sgerrand.rsa.pub && \
