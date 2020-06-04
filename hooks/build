@@ -7,7 +7,7 @@ MINVER=${MINVER:-3.6}
 . "$(dirname "$0")/reg-tags/image_tags.sh"
 
 
-for tag in $(img_newtags --filter '[0-9]+(\.[0-9]+)+$' --verbose -- "$im" "$(img_unqualify "$DOCKER_REPO")"); do
+for tag in $(img_tags --filter '[0-9]+(\.[0-9]+)+$' --verbose -- "$im"); do
     if [ "$(img_version "$tag")" -ge "$(img_version "$MINVER")" ]; then
         echo "============== Building ${DOCKER_REPO}:$tag"
         docker build --build-arg SRCTAG="$tag" -t "${DOCKER_REPO}:$tag" .
