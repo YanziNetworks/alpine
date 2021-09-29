@@ -27,13 +27,13 @@ jobs:
       -
         name: Build GHCR images
         env:
-          DOCKER_REPO: ghcr.io/YanziNetworks/alpine
+          DOCKER_REPO: ghcr.io/yanzinetworks/alpine
           SOURCE_COMMIT: ${{ github.sha }}
         run: ./hooks/build
       -
         name: Push GHCR images
         env:
-          DOCKER_REPO: ghcr.io/YanziNetworks/alpine
+          DOCKER_REPO: ghcr.io/yanzinetworks/alpine
           SOURCE_COMMIT: ${{ github.sha }}
         run: ./hooks/push
       -
