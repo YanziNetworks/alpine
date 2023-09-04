@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: keepalive
-        uses: efrecon/gh-action-keepalive@master
+        uses: efrecon/gh-action-keepalive@v2.0.0
